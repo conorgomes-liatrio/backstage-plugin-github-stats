@@ -1,13 +1,38 @@
-# pet-pics
+# GitHub Stats Backstage Plugin
 
-Welcome to the pet-pics plugin!
+Source code for [this](https://www.npmjs.com/package/@conor-pythons-learn/backstage-plugin-github-stats?activeTab=readme) backstage plugin
 
-_This plugin was created through the Backstage CLI_
+## Overview
 
-## Getting started
+A simple app that displays repo info on components loaded into backstage.
 
-Your plugin has been added to the example app in this repository, meaning you'll be able to access it by running `yarn start` in the root directory, and then navigating to [/pet-pics](http://localhost:3000/pet-pics).
+Includes
+- PR and Issue counts
+- Displays readme
+- Recent contributors
 
-You can also serve the plugin in isolation by running `yarn start` in the plugin directory.
-This method of serving the plugin provides quicker iteration speed and a faster startup and hot reloads.
-It is only meant for local development, and the setup for it can be found inside the [/dev](./dev) directory.
+## Setup
+
+1. Install with the following command
+
+```bash
+yarn --cwd packages/app add @conor-pythons-learn/backstage-plugin-github-stats
+```
+
+
+2. Import and add in `packages/app/src/components/catalog/EntityPage.tsx`
+
+```diff
++ import { GitHubInfo } from '@conor-pythons-learn/backstage-plugin-github-stats';
+  ...
+  <Grid container spacing={3} alignItems="stretch">
+    {entityWarningContent}
+    <Grid item md={6}>
+      <EntityAboutCard variant="gridItem" />
+    </Grid>
+    ...
++   <Grid item md={12} xs={12}>
+      <GitHubInfo />
+    </Grid>
+    ...
+```
