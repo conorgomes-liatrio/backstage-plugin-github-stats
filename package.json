@@ -1,8 +1,7 @@
 {
-  "name": "@internal/plugin-github-stats",
+  "name": "@conor-pythons-learn/backstage-plugin-github-stats",
   "version": "0.1.0",
   "license": "Apache-2.0",
-  "private": false,
   "main": "src/index.ts",
   "types": "src/index.ts",
   "publishConfig": {
@@ -11,7 +10,11 @@
     "types": "dist/index.d.ts"
   },
   "backstage": {
-    "role": "frontend-plugin"
+    "role": "frontend-plugin",
+    "pluginId": "github-stats",
+    "pluginPackages": [
+      "@conor-pythons-learn/backstage-plugin-github-stats"
+    ]
   },
   "sideEffects": false,
   "scripts": {
