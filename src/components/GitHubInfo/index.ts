@@ -1,0 +1,1 @@
+export { GitHubInfo } from './GitHubInfo';
