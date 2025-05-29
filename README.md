@@ -32,7 +32,7 @@ yarn --cwd packages/app add @conor-pythons-learn/backstage-plugin-github-stats
     </Grid>
     ...
 +   <Grid item md={12} xs={12}>
-      <GitHubInfo />
-    </Grid>
++     <GitHubInfo />
++   </Grid>
     ...
 ```
