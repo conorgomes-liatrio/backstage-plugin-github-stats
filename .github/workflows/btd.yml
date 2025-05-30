@@ -1,0 +1,21 @@
+name: Build Test Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: echo "BUILD"
+
+      - name: Test
+        run: echo "TEST"
+
+      - name: Deploy
+        run: echo "DEPLOY"
